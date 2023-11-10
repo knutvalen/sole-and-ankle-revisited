@@ -24,9 +24,9 @@ const breakpoints = {
 };
 
 const queries = {
-  'phoneAndSmaller': `max-width(${breakpoints.phoneMax / 16}rem)`,
-  'tabletAndSmaller': `max-width(${breakpoints.tabletMax / 16}rem)`,
-  'laptopAndSmaller': `max-width(${breakpoints.laptopMax / 16}rem)`,
+  'phoneAndSmaller': `(max-width: ${breakpoints.phoneMax / 16}rem)`,
+  'tabletAndSmaller': `(max-width: ${breakpoints.tabletMax / 16}rem)`,
+  'laptopAndSmaller': `(max-width: ${breakpoints.laptopMax / 16}rem)`,
 };
 
 export const theme = {
