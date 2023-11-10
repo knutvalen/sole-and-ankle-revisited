@@ -1,7 +1,5 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-
-import { COLORS, WEIGHTS } from '../../constants';
 import Logo from '../Logo';
 import SuperHeader from '../SuperHeader';
 import MobileMenu from '../MobileMenu';
@@ -45,13 +43,17 @@ const MainHeader = styled.div`
   align-items: baseline;
   padding: 18px 32px;
   height: 72px;
-  border-bottom: 1px solid ${COLORS.gray[300]};
+  border-bottom: 1px solid ${p => p.theme.colors.gray[300]};
 `;
 
 const Nav = styled.nav`
   display: flex;
   gap: 48px;
-  margin: 0px 48px;
+  margin: 0 48px;
+  
+  @media (${p => p.theme.queries.phoneAndSmaller}) {
+    display: none;
+  }
 `;
 
 const Side = styled.div`
@@ -62,11 +64,11 @@ const NavLink = styled.a`
   font-size: 1.125rem;
   text-transform: uppercase;
   text-decoration: none;
-  color: ${COLORS.gray[900]};
-  font-weight: ${WEIGHTS.medium};
+  color: ${p => p.theme.colors.gray[900]};
+  font-weight: ${p => p.theme.weights.medium};
 
   &:first-of-type {
-    color: ${COLORS.secondary};
+    color: ${p => p.theme.colors.secondary};
   }
 `;
 
